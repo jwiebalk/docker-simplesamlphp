@@ -60,10 +60,6 @@ $config = array(
         /*'attributes.required' => array (
             'urn:oid:x.x.x.x',
         ),*/
-        'bkmapping'   => array(
-        'login'     => 'uid',
-        'eMail'     => 'mail'
-    )
     ),
 /*
     'dubdev-adfs' => array(
