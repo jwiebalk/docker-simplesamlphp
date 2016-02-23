@@ -43,7 +43,7 @@ $config = array(
      * Note: The messages are logged with the DEBUG log level, so you also need to set
      * the 'logging.level' option to LOG_DEBUG.
      */
-    'debug' => true,
+    'debug' => false,
 
     /*
      * When showerrors is enabled, all error messages and stack traces will be output
@@ -87,7 +87,7 @@ $config = array(
      * A possible way to generate a random salt is by running the following command from a unix shell:
      * tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;echo
      */
-    'secretsalt' => 'zp97u35n5nic93we9m56pfxetx7fp',
+    'secretsalt' => 'zp97u35nlog5nic93we9m56pfxetx7fp',
 
     /*
      * Some information about the technical persons running this installation.
