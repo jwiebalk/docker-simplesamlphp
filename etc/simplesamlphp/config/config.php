@@ -204,30 +204,30 @@ $config = array(
      * one of the functionalities below, but in some cases you could run multiple functionalities.
      * In example when you are setting up a federation bridge.
      */
-    'enable.saml20-idp' => false,
+    'enable.saml20-idp' => true,
     'enable.shib13-idp' => false,
-    'enable.adfs-idp' => true,
+    'enable.adfs-idp' => false,
     'enable.wsfed-sp' => false,
     'enable.authmemcookie' => false,
 
 
-    /*
-     * Module enable configuration
-     *
-     * Configuration to override module enabling/disabling.
-     *
-     * Example:
-     *
-     * 'module.enable' => array(
-     * 	// Setting to TRUE enables.
-     * 	'exampleauth' => TRUE,
-     * 	// Setting to FALSE disables.
-     * 	'saml' => FALSE,
-     * 	// Unset or NULL uses default.
-     * 	'core' => NULL,
-     * ),
-     *
-     */
+
+     // Module enable configuration
+
+      //Configuration to override module enabling/disabling.
+
+      //Example:
+
+      'module.enable' => array(
+      	// Setting to TRUE enables.
+      	'exampleauth' => TRUE,
+      	// Setting to FALSE disables.
+      	//'saml' => FALSE,
+      	// Unset or NULL uses default.
+      	//'core' => NULL,
+      ),
+
+
 
 
     /*
