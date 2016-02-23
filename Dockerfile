@@ -10,13 +10,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ####################
 # apache2 server
 RUN apt-get update  -y
-RUN apt-get install -y git subversion curl htop
-RUN apt-get install -y apache2
-RUN apt-get install -y apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils openssl-blacklist
-RUN apt-get install -y libmcrypt-dev mcrypt
-RUN apt-get install -y php5 libapache2-mod-php5 php5-mcrypt php-pear
-RUN apt-get install -y php5-common php5-cli php5-curl php5-gmp php5-ldap
-RUN apt-get install -y libapache2-mod-gnutls
+RUN apt-get install -y git subversion curl htop \
+apache2 apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils openssl-blacklist \
+libmcrypt-dev mcrypt php5 libapache2-mod-php5 php5-mcrypt php-pear php5-common php5-cli php5-curl php5-gmp php5-ldap libapache2-mod-gnutls php5-sqlite
 RUN a2enmod gnutls
 
 ####################
