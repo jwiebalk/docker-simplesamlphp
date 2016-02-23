@@ -60,15 +60,19 @@ $config = array(
         /*'attributes.required' => array (
             'urn:oid:x.x.x.x',
         ),*/
+        'bkmapping'   => array(
+        'login'     => 'uid',
+        'eMail'     => 'mail'
+    )
     ),
-
+/*
     'dubdev-adfs' => array(
         'saml:SP',
         'idp' => 'https://dubdevdc.dubdev.com/adfs/services/trust',
         'privatekey' => 'saml.pem',
         'certificate' => 'saml.crt',
     ),
-
+*/
     /*
     'example-sql' => array(
         'sqlauth:SQL',
@@ -88,25 +92,25 @@ $config = array(
     ),
     */
 
-    /*
+
     'example-userpass' => array(
         'exampleauth:UserPass',
-
         // Give the user an option to save their username for future login attempts
         // And when enabled, what should the default be, to save the username or not
         //'remember.username.enabled' => FALSE,
         //'remember.username.checked' => FALSE,
 
         'student:studentpass' => array(
-            'uid' => array('test'),
-            'eduPersonAffiliation' => array('member', 'student'),
+            //'NameID' => array('student'),
+            'NameID' => 'student',
         ),
         'employee:employeepass' => array(
-            'uid' => array('employee'),
-            'eduPersonAffiliation' => array('member', 'employee'),
+            'NameID' => array('employee'),
+            'administrator' => array('true'),
         ),
+
     ),
-    */
+
 
     /*
     'crypto-hash' => array(
@@ -389,5 +393,4 @@ $config = array(
 
     ),
     */
-
 );
