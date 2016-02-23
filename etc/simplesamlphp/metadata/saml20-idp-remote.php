@@ -1,5 +1,5 @@
 <?php
-$metadata['__DYNAMIC:1__'] = array(
+$metadata['test1'] = array(
     /*
      * The hostname for this IdP. This makes it possible to run multiple
      * IdPs from the same configuration. '__DEFAULT__' means that this one
