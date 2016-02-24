@@ -1,6 +1,6 @@
 # docker-simplesamlphp
 
-simpleSAMLphp installed on a vagrant virtual machine and hosted in Docker.
+simpleSAMLphp server hosted in Docker.
 
 
 ## Prerequisites
@@ -43,7 +43,7 @@ To use your own/example configs stored on the host in /var/simplesamlphp
 
 ```
 sudo docker run -d -p 8080:80 -p 8444:443 \
--v /var/simplesamlphp/config/:/GitHub/docker-simplesamlphp/etc/simplesamlphp/config/ -v /var/simplesamlphp/metadata/:/GitHub/docker-simplesamlphp/etc/simplesamlphp/metadata/ jwiebalk/simplesamlphp
+-v /GitHub/docker-simplesamlphp/etc/simplesamlphp/config/:/var/simplesamlphp/config/ -v /GitHub/docker-simplesamlphp/etc/simplesamlphp/metadata/:/var/simplesamlphp/metadata/ jwiebalk/simplesamlphp
 ```
 
 ## Build the Package and Publish it to Dockerhub
