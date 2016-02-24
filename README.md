@@ -42,7 +42,7 @@ password: password
 To use your own/example configs stored on the host in /var/simplesamlphp
 
 ```
-sudo docker run -d -p 58080:80 -p 58443:443 \
+sudo docker run -d -p 8080:80 -p 8444:443 \
 -v /var/simplesamlphp/config/:/GitHub/docker-simplesamlphp/etc/simplesamlphp/config/ -v /var/simplesamlphp/metadata/:/GitHub/docker-simplesamlphp/etc/simplesamlphp/metadata/ jwiebalk/simplesamlphp
 ```
 
