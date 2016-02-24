@@ -59,4 +59,4 @@ sudo docker build --rm=true -t simplesamlphp .
 ### Adding ServiceProvider notes
 
 For the `saml20-sp-remote.php` file this can be created using the [XML to SimpleSAMLphp metadata converter](https://localhost:8444/simplesaml/module.php/core/frontpage_federation.php)
-and pasting in the metadata from your SP such as https://10.0.1.23/saml/metadata
+and pasting in the metadata from your SP such as https://{ghe-instance}/saml/metadata
