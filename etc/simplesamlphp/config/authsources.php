@@ -99,10 +99,12 @@ $config = array(
         'student:studentpass' => array(
             //'NameID' => array('student'),
             'NameID' => 'student',
+            'emails' => 'student@example.com',
         ),
         'employee:employeepass' => array(
             'NameID' => array('employee'),
             'administrator' => array('true'),
+            'emails' => 'employee@example.com',
         ),
 
     ),
