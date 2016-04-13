@@ -12,7 +12,7 @@ Docker
 Clone repo to get demo config data and update `saml20-sp-remote.php` to point to your GHE deployment
 
 ```
-git clone https://ghe.io/jwiebalk/docker-simplesamlphp.git
+git clone https://github.com/jwiebalk/docker-simplesamlphp.git
 cd docker-simplesamlphp
 ```
 
@@ -51,7 +51,7 @@ sudo docker run -d -p 8080:80 -p 8444:443 \
 Build the container locally
 
 ```
-git clone https://ghe.io/jwiebalk/docker-simplesamlphp.git
+git clone https://github.com/jwiebalk/docker-simplesamlphp.git
 cd docker-simplesamlphp
 sudo docker build --rm=true -t simplesamlphp .
 ```
