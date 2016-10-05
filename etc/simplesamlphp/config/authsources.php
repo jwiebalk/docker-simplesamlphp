@@ -97,9 +97,14 @@ $config = array(
         //'remember.username.checked' => FALSE,
 
         'student:studentpass' => array(
-            //'NameID' => array('student'),
-            'NameID' => 'student',
-            'emails' => 'student@example.com',
+            'NameID' => 'student2',
+            'emails' => 'student@example4.com',
+            'full_name' => 'student 2',
+        ),
+        'student1:studentpass' => array(
+            //'NameID' => array('student1'),
+            'NameID' => 'student1',
+            'emails' => 'student1@example.com',
         ),
         'employee:employeepass' => array(
             'NameID' => array('employee'),
