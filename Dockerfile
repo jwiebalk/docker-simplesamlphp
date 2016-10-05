@@ -10,8 +10,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ####################
 # apache2 server
 
-RUN apk add --no-cache git curl htop apache2 openssl libmcrypt php5 php5-mcrypt php5-pear php5-common \
-php5-cli php5-curl php5-gmp php5-ldap php5-sqlite3 php5-apache2 php5-json php5-openssl php5-phar php5-zlib php5-dom php5-pdo_sqlite
+RUN apk add --no-cache git curl apache2 openssl libmcrypt php5 php5-mcrypt php5-pear php5-common \
+php5-cli php5-curl php5-gmp php5-ldap php5-sqlite3 php5-apache2 \
+php5-json php5-openssl php5-phar php5-zlib php5-dom php5-pdo_sqlite apache2-ssl
 
 
 ####################
@@ -24,7 +25,7 @@ RUN mkdir -p /var/simplesamlphp/config && cp -r /var/simplesamlphp/config-templa
 RUN mkdir -p /var/simplesamlphp/metadata && cp -r /var/simplesamlphp/metadata-templates/* /var/simplesamlphp/metadata/
 
 ADD ./etc/simplesamlphp/config/config.php /var/simplesamlphp/config/config.php
-ADD ./etc/apache2/sites-enabled/000-default.conf /etc/apache2/conf.d/000-default.conf
+ADD ./etc/apache2/conf.d/000-default.conf /etc/apache2/conf.d/000-default.conf
 
 ####################
 # PKI
