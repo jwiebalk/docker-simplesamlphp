@@ -1,8 +1,7 @@
-# simpleSAMLphp
 #
 # VERSION               1.0.0
 
-FROM      alpine:3.4
+FROM      alpine:latest
 MAINTAINER John Wiebalk "jwiebalk@github.com"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,9 +9,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ####################
 # apache2 server
 
-RUN apk add --no-cache git curl apache2 openssl libmcrypt php5 php5-mcrypt php5-pear php5-common \
-php5-cli php5-curl php5-gmp php5-ldap php5-sqlite3 php5-apache2 \
-php5-json php5-openssl php5-phar php5-zlib php5-dom php5-pdo_sqlite apache2-ssl
+RUN apk add --no-cache git curl apache2 openssl libmcrypt php7 php7-mcrypt php7-pear php7-common \
+php7-cli php7-curl php7-gmp php7-ldap php7-sqlite3 php7-apache2 php7-iconv \
+php7-json php7-openssl php7-phar php7-zlib php7-dom php7-pdo_sqlite apache2-ssl \
+php7-xmlwriter php7-simplexml php7-mbstring php7-ctype php7-tokenizer
 
 
 ####################
@@ -29,7 +29,7 @@ ADD ./etc/apache2/conf.d/000-default.conf /etc/apache2/conf.d/000-default.conf
 
 ####################
 # PKI
-RUN mkdir -p /var/simplesamlphp/cert && openssl req -x509 -batch -nodes -newkey rsa:2048 -keyout /var/simplesamlphp/cert/saml.pem -out /var/simplesamlphp/cert/saml.crt
+RUN mkdir -p /var/simplesamlphp/cert && openssl req -x509 -batch -nodes -newkey rsa:2048 -days 3652 -keyout /var/simplesamlphp/cert/saml.pem -out /var/simplesamlphp/cert/saml.crt
 
 ####################
 # Composer
